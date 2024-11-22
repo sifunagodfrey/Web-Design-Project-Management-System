@@ -1,0 +1,267 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg-color: #f8f9fa;
+    --card-text-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #343a40;
+    --text-color: #ffffff;
+    --card-bg-color: #495057;
+    --card-text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#wrapper {
+    display: flex;
+    flex: 1;
+}
+
+#sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    padding: 20px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+.list-group-item-action {
+    transition: 0.2s;
+}
+
+.list-group-item-action:hover {
+    background-color: #e9ecef;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dashboard specific styles */
+.lead-card {
+    border: 1px solid #ddd;
+}
+
+.lead-card .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* add client form */
+.container-fluid {
+    padding: 20px; /* Add padding around the content */
+    margin: 0; /* Remove default margin */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+}
+
+/* Form row layout to ensure proper spacing */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    font-weight: ;
+}
+
+.form-control {
+    width: 100%; /* Ensure inputs take full width of their container */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Button styles */
+.btn {
+    margin-top: 10px;
+}
+
+.col-md-3 {
+    display: flex;
+    align-items: center;
+    padding-right: 15px; /* Add space between label and input */
+}
+
+.col-md-9 {
+    display: flex;
+    align-items: center;
+    padding-left: 15px; /* Add space between label and input */
+}
+
+/* manage client Table */
+.table-responsive {
+    width: 100%; /* Make sure the container uses full width */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.table {
+    width: 100%; /* Ensure the table takes up full width of the container */
+    margin-bottom: 1rem; /* Margin at the bottom of the table */
+}
+
+.table th, .table td {
+    text-align: left; /* Align text to the left in table cells */
+    vertical-align: middle; /* Align text vertically in the middle of the cells */
+    padding: 1rem; /* Add padding inside table cells for better readability */
+}
+
+
+
+/* login page */
+.login-body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    color: #1877f2;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.create-account-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #42b72a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 250px;
+        position: fixed;
+        top: 56px; /* height of navbar */
+        left: -250px;
+        transition: all 0.3s;
+    }
+
+    #sidebar-wrapper.active {
+        left: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+}
